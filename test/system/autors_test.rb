@@ -23,7 +23,7 @@ class AutorsTest < ApplicationSystemTestCase
 
   test "Atualizando um Autor" do
     visit autors_url
-    click_on "Edit", match: :first
+    click_on "Editar", match: :first
 
     fill_in "Nome", with: @autor.nome
     click_on "Atualizar"

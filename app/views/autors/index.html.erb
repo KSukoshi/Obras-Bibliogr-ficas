@@ -5,15 +5,18 @@
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
+      <th>Nomes: <%= @autors.count %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+
     <% @autors.each do |autor| %>
+    <% conjunto = [" da" , " de" , " do" , " das" , " dos"]
+     conj = Regexp.union(conjunto) %>
       <tr>
-        <td><%= autor.nome.upcase.split(' ')[1..-1].join(' ')%>, <%= autor.nome.split.first %> </td>
+        <td><%=  autor.nome.gsub(conj, "").upcase.split(' ')[1..-1].join(' ')%>, <%= autor.nome.capitalize.split.first %> </td>
         <td><%= link_to 'Editar', edit_autor_path(autor) %></td>
         <td><%= link_to 'Deletar', autor, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
