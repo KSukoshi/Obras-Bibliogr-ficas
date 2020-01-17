@@ -32,7 +32,7 @@ As seguintes regras devem ser seguidas nesta formatação:
 
 Deve-se ter prêviamente instalado Ruby versão 2.7.0p0 e Rails 5.2.4.1
 
-Entre na pasta do projeto utilizando o seguinte comando:
+Entre na pasta do projeto utilizando o seguinte comando no console:
 
 ```
 cd <pasta do projeto>
